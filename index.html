@@ -3,60 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pin Generator</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/fav.png" type="image/x-icon">
+    <!-- stylesheet  -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="pin-generator half-width">
-                    <input id="pin-create-input" class="form-control" type="text">
-                    <button id="pin-generate-btn" class="generate-btn">Generate Pin</button>
+    <main class="container">
+        <div class="pin-body">
+            <!-- pin generator section  -->
+            <section class="left">
+                <input id="pin-create-input" type="text">
+                <div class="left-generate center">
+                    <h1 id="pin-generate-btn" class="pin-btn center">Generate Pin</h1>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="input-section half-width">
-                    <input id="type-pin" class="form-control" type="text">
-                    <div class="numbers">
-                        <div class="calc-body">
-                            <div class="calc-button-row">
-                                <div class="button">7</div>
-                                <div class="button">8</div>
-                                <div class="button">9</div>
-                            </div>
-                            <div class="calc-button-row">
-                                <div class="button">4</div>
-                                <div class="button">5</div>
-                                <div class="button">6</div>
-                            </div>
-                            <div class="calc-button-row">
-                                <div class="button">1</div>
-                                <div class="button">2</div>
-                                <div class="button">3</div>
-                            </div>
-                            <div class="calc-button-row">
-                                <div class="button">&lt;</div>
-                                <div class="button">0</div>
-                                <div class="button">C</div>
-                            </div>
-                            <div>
-                                <button id="pin-submit" type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
-                            </div>
-                        </div>
+            </section>
+
+            <!-- pin type section  -->
+            <section class="right">
+                <input id="type-pin" type="text">
+                <div class="right-part">
+
+                    <!-- keypad  -->
+                    <div id="key-pad" class="numbers">
+                        <h1>7</h1>
+                        <h1>8</h1>
+                        <h1>9</h1>
+                        <h1>4</h1>
+                        <h1>5</h1>
+                        <h1>6</h1>
+                        <h1>1</h1>
+                        <h1>2</h1>
+                        <h1>3</h1>
+                        <h1>&#60;</h1>
+                        <h1>0</h1>
+                        <h1>C</h1>
                     </div>
                 </div>
-            </div>
-            <div class="notify-section">
-                <p id="match-yes" class="notify">❌ Pin Didn't Match, Please try again</p>
-                <p id="match-no" class="notify">✅ Pin Matched... Secret door is opening for you</p>
-            </div>
+
+                <!-- submit button  -->
+                <button id="pin-submit">SUBMIT</button>
+                <p class="action-left">3 try left</p>
+            </section>
         </div>
+
+        <!-- verify notification section -->
+        <section class="notify-section">
+            <p id="match-yes" class="notify">✅ Pin Matched... Secret door is opening for you</p>
+            <p id="match-no" class="notify">❌ Pin Didn't Match, Please try again</p>
+        </section>
+    </main>
+    <!-- js connection -->
+    <script src="js/script.js"></script>
 </body>
 
 </html>
